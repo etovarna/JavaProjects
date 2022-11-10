@@ -119,31 +119,34 @@ public class EjerciciosJava {
         return num_packages;
     }
 
-    public static int romanToDecimal(char roman) {
-
-        if (roman == 'I') {
-            return 1;
+    public static int romanToDecimal(char roman) throws Exception {
+        
+        try {
+            if (roman == 'I') {
+                return 1;
+            }
+            if (roman == 'V') {
+                return 5;
+            }
+            if (roman == 'X') {
+                return 10;
+            }
+            if (roman == 'L') {
+                return 50;
+            }
+            if (roman == 'C') {
+                return 100;
+            }
+            if (roman == 'D') {
+                return 500;
+            }
+            if (roman == 'M') {
+                return 1000;
+            }
+        } catch (Exception ex){
+            throw new Exception("The letter "+roman+" can not be written in decimal numbers");
         }
-        if (roman == 'V') {
-            return 5;
-        }
-        if (roman == 'X') {
-            return 10;
-        }
-        if (roman == 'L') {
-            return 50;
-        }
-        if (roman == 'C') {
-            return 100;
-        }
-        if (roman == 'D') {
-            return 500;
-        }
-        if (roman == 'M') {
-            return 1000;
-        }
-        return -1;
-
+        return 0;
     }
 
     public static int romanToDecimal(String roman) {
@@ -211,4 +214,6 @@ public class EjerciciosJava {
         System.out.println("The "+fibonacci+ "th fibonacci number is "+getFibonacci2(fibonacci));
         
     }
+    
+    
 }
